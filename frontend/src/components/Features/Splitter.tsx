@@ -17,7 +17,7 @@ export default function Splitter() {
   const [stems, setStems] = useState<SeparationResponse["stems"] | null>(null);
   const [loading, setLoading] = useState(false);
 
-``  const handleUpload = async (files: FileList) => {
+  const handleUpload = async (files: FileList) => {
     const formData = new FormData();
     formData.append("file", files[0]);
 
