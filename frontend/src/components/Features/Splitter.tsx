@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Upload from "./Reuse/Upload";
-import { Download } from "../icons/Download";
+import Upload from "../Reuse/Upload";
+import { Download } from "../../icons/Download";
 
 interface SeparationResponse {
   message: string;
@@ -17,7 +17,7 @@ export default function Splitter() {
   const [stems, setStems] = useState<SeparationResponse["stems"] | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const handleUpload = async (files: FileList) => {
+``  const handleUpload = async (files: FileList) => {
     const formData = new FormData();
     formData.append("file", files[0]);
 
@@ -47,11 +47,6 @@ export default function Splitter() {
 
   return (
     <div>
-      <header className="flex justify-between mx-2 my-3 text-2xl border-yellow-300 border-y-4 px-2 py-3">
-        <div>ProdHaven</div>
-        <div>profile</div>
-      </header>
-
       <h2>Upload a Track to Split</h2>
 
       <main className="justify-items-center">

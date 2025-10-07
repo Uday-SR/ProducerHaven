@@ -1,0 +1,21 @@
+{
+    "guitar": {
+        "notes": ["E2", "A2", "D3", "G3", "B3", "E4"]
+    },
+
+    "ukulele": {
+        "notes": ["G4", "C4", "E4", "A4"]
+    },
+
+    "bassGuitar": {
+        "notes": ["E1", "A1", "D2", "G2"]
+    },
+
+    "violin": {
+        "notes": ["G3", "D4", "A4", "E5"]
+    },
+
+    "cello": {
+        "notes": ["C2", "G2", "D3", "A3"]
+    }
+}
