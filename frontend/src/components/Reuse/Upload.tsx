@@ -17,7 +17,7 @@ const Upload: React.FC<UploadProps> = ({
   };
 
   return (
-    <div className="mt-5 border-4 px-10 py-3 text-1xl rounded-3xl border-emerald-300 shadow-amber-300 transition-all duration-300 hover:text-2xl hover:border-amber-300" >
+    <div className="mt-5 border-4 px-10 py-3 text-1xl rounded-3xl border-emerald-300 shadow-amber-300 transition-all duration-300 hover:shadow-cyan-300 hover:border-amber-300" >
       <label 
         htmlFor="upload"
         className=""

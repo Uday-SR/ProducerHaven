@@ -80,7 +80,7 @@ export default function Tuner() {
             background: detune && Math.abs(detune) < 5 ? "green" : "red",
             transform: `rotate(${angle}deg) translateY(-50%)`,
             transformOrigin: "bottom center",
-            transition: "transform 0.1s ease-out",
+            transition: "transform 0.5s ease-out",
           }}
         ></div>
       </div>
@@ -90,7 +90,7 @@ export default function Tuner() {
   );
 }
 
-// 🎵 Convert frequency to note name + cents offset
+// Convert frequency to note name + cents offset
 function getNoteInfo(frequency: number) {
   const A4 = 440;
   const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
