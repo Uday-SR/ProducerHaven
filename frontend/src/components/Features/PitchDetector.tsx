@@ -6,6 +6,4 @@ function PitchDetector() {
     const bassGuitarStrings = ["E1", "A1", "D2", "G2"];
     const violinStrings = ["G3", "D4", "A4", "E5"];
     const celloStrings = ["C2", "G2", "D3", "A3"];
-    
-    
 }

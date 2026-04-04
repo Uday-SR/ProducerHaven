@@ -52,7 +52,7 @@ export default function Tuner() {
   const angle = detune ? Math.max(-50, Math.min(50, detune)) : 0;
 
   return (
-    <div style={{ textAlign: "center", marginTop: "40px" }}>
+    <div className="text-center">
       <h2>Tuner</h2>
       <h3>{note ? `Note: ${note}` : "Listening..."}</h3>
 

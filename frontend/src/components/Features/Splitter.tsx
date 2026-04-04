@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Upload from "../Reuse/Upload";
 import { Download } from "../../icons/Download";
+import splitImg from "../../assets/splitImg.png"
 
 interface SeparationResponse {
   message: string;
@@ -47,19 +48,24 @@ export default function Splitter() {
 
   return (
     <div>
-      <h2>Upload a Track to Split</h2>
 
       <main className="justify-items-center">
-        <div className="justify-items-center mx-20 mt-10 w-100 md:w-130 lg:w-150  h-auto border-2 rounded-3xl shadow-2xl shadow-emerald-300">
-          <Upload label="Upload & Split" onUpload={handleUpload} />
 
+        <img
+            src={splitImg}
+            className="object-cover rounded-2xl border-1 hover:border-amber-300 transition duration-300"
+          />
+
+        <div className="justify-items-center mx-20 mt-10 w-100 md:w-130 lg:w-150  h-auto border-2 rounded-3xl shadow-xl shadow-emerald-300">
+
+          <Upload label="Upload & Split" onUpload={handleUpload} />
           <div className="mx-2 my-4">{loading && <p>⏳ Separating track, please wait...</p>}</div>
 
           {stems && (
             <div className="mt-10 items-center">
               <h3 className="italic ml-25">Separated Stems</h3>
               {Object.entries(stems).map(([name, url]) => (
-                <div key={name} className="my-5">
+                <div key={name} className="my-5 bg-gray-600">
                   <h4>{name.toUpperCase()}</h4>
 
                   <div className="flex">
