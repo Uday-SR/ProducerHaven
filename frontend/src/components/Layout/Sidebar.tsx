@@ -59,13 +59,13 @@ export default function Sidebar({
                 {expanded && <span>Tuner</span>}
             </div>
 
-            {/* Pitch */}
+            {/* Master */}
             <div
-                className={itemClass("pitch")}
-                onClick={() => setFeature("pitch")}
+                className={itemClass("master")}
+                onClick={() => setFeature("master")}
             >
                 <PitchD />
-                {expanded && <span>Pitch Detector</span>}
+                {expanded && <span>Master</span>}
             </div>
 
             {/* Karaoke */}

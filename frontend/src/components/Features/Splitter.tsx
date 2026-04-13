@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+
 import Upload from "../Reuse/Upload";
+import AudioWaveform from "../Reuse/AudioWaveform";
+
 import { Download } from "../../icons/Download";
 import splitImg from "../../assets/splitImg.png"
+
 
 interface SeparationResponse {
   message: string;
@@ -30,8 +34,8 @@ export default function Splitter() {
         formData,
         {
           headers: {
-            "Content-Type": "multipart/form-data",
-          },
+            "Content-Type": "multipart/form-data"
+          }
         }
       );
 
@@ -54,25 +58,31 @@ export default function Splitter() {
         <img
             src={splitImg}
             className="object-cover rounded-2xl border-1 hover:border-amber-300 transition duration-300"
-          />
+        />
 
-        <div className="justify-items-center mx-20 mt-10 w-100 md:w-130 lg:w-150  h-auto border-2 rounded-3xl shadow-xl shadow-emerald-300">
+        <div className="mt-10 ml-5 italic text-blue-200 font-mono lg:w-150">
+          <p>Music splitter tool separates a song into individual components like vocals, drums, bass, and instruments using AI.
+            It helps producers remix tracks, create karaoke versions, or analyze music by isolating each element from a full audio file.</p>
+        </div>
 
-          <Upload label="Upload & Split" onUpload={handleUpload} />
-          <div className="mx-2 my-4">{loading && <p>⏳ Separating track, please wait...</p>}</div>
+        <div className="justify-items-center my-10">
+
+          <Upload label={loading ? "Processing..." : "Import"} onUpload={handleUpload} />
 
           {stems && (
-            <div className="mt-10 items-center">
-              <h3 className="italic ml-25">Separated Stems</h3>
+            <div className="items-center">
+              <h3 className="italic">Separated Stems</h3>
               {Object.entries(stems).map(([name, url]) => (
-                <div key={name} className="my-5 bg-gray-600">
-                  <h4>{name.toUpperCase()}</h4>
+                <div key={name} className="">
+                  <h3>{name.toUpperCase()}</h3>
 
-                  <div className="flex">
-                    <audio controls src={url}></audio>
-              
-                    <a className="mx-2 my-4" href={url} download>
-                      <Download/>
+                  <div className="flex items-start gap-3 w-full">
+                    <div className="flex-1 min-h-[120px]">
+                      <AudioWaveform audioUrl={url} />
+                    </div>
+
+                    <a className="mx-2 my-4 shrink-0" href={url} download>
+                      <Download />
                     </a>
                   </div>
                 </div>

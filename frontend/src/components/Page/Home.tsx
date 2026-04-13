@@ -3,8 +3,10 @@ import { useState } from "react";
 import { Header } from "../Layout/Header";
 import Sidebar from "../Layout/Sidebar";
 
-import Tuner from "../Features/Tuner";
+import Tuner from "../Features/Tuner/Tuner";
 import Splitter from "../Features/Splitter";
+import Master from "../Features/Master/Master";
+
 
 export function Home() {
     const [expanded, setExpanded] = useState(false);
@@ -16,8 +18,10 @@ export function Home() {
                 return <Tuner />;
             case "splitter":
                 return <Splitter />;
+            case "master":
+                return <Master />    
             default:
-                return <Splitter />;
+                return <Tuner />;
         }
     };
 

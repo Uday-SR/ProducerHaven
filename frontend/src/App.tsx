@@ -1,5 +1,5 @@
 import { Home } from "./components/Page/Home";
-import Guitar from "./components/Features/Tuner/Guitar";
+import Guitar from "./components/Features/Tuner/Tuner";
 
 
 function App() {
