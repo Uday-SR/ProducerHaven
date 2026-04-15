@@ -29,12 +29,14 @@ export function Home() {
         <>
             <Header /> 
             <div className="flex">
-                <Sidebar 
-                    expanded={expanded} 
-                    toggleSidebar={() => setExpanded(!expanded)} 
-                    setFeature={setFeature}
-                    feature={feature}
-                />
+                <div className="fixed">
+                    <Sidebar 
+                        expanded={expanded} 
+                        toggleSidebar={() => setExpanded(!expanded)} 
+                        setFeature={setFeature}
+                        feature={feature}
+                    />
+                </div>    
 
                 <div className="flex-1 p-4 mx-10 my-3 bg-gray-950 rounded-2xl shadow-2xl shadow-sky-50">  
                     {renderFeature()}

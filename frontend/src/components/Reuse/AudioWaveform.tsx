@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
+import Play from "../icons/Play";
+import Pause from "../icons/Pause";
 
 type Props = {
   audioUrl: string;
@@ -17,9 +19,9 @@ export default function AudioWaveform({ audioUrl }: Props) {
       container: waveformRef.current,
       waveColor: "#ccc",
       progressColor: "#6366f1",
-      height: 50,
-      width: 10,
-      barWidth: 3,
+      height: 100,
+      width: 400,
+      barWidth: 1,
     });
 
     wavesurfer.current.load(audioUrl);
@@ -37,15 +39,17 @@ export default function AudioWaveform({ audioUrl }: Props) {
   };
 
   return (
-    <div className="p-4 ">
-      <div ref={waveformRef} className="w-full"/>
+    <div className="p-4 flex">
 
       <button
         onClick={togglePlay}
-        className="mt-4 px-4 py-2 bg-black text-white rounded"
+        className="right-5 px-4"
       >
-        {isPlaying ? "Pause" : "Play"}
+        {isPlaying ? <Pause /> : <Play />}
       </button>
+
+      <div ref={waveformRef} className="w-full"/>
+
     </div>
   );
 }

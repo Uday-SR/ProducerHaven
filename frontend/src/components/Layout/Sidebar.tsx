@@ -29,7 +29,7 @@ export default function Sidebar({
 
     return (
         <div
-            className={`h-screen italic font-mono ml-2 py-10 my-3 bg-fuchsia-950 border border-e-orange-300 text-yellow-500 
+            className={`h-115 italic font-mono ml-2 py-2 my-3 bg-fuchsia-950 border border-e-orange-300 text-yellow-500 
             ${expanded ? "w-50" : "w-20"} justify-center rounded-2xl transition-all duration-300 ease-in-out`}
         >
 

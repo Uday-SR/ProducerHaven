@@ -71,9 +71,9 @@ export default function Splitter() {
 
           {stems && (
             <div className="items-center">
-              <h3 className="italic">Separated Stems</h3>
+              <h3 className="italic border-1 w-fit px-3 my-5 text-black text-shadow-2xs bg-amber-300">Separated Stems</h3>
               {Object.entries(stems).map(([name, url]) => (
-                <div key={name} className="">
+                <div key={name} className="font-mono text-gray-300">
                   <h3>{name.toUpperCase()}</h3>
 
                   <div className="flex items-start gap-3 w-full">
@@ -81,7 +81,7 @@ export default function Splitter() {
                       <AudioWaveform audioUrl={url} />
                     </div>
 
-                    <a className="mx-2 my-4 shrink-0" href={url} download>
+                    <a className="mx-2 mt-12 shrink-0" href={url} download>
                       <Download />
                     </a>
                   </div>
