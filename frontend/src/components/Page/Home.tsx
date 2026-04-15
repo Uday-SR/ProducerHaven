@@ -38,7 +38,7 @@ export function Home() {
                     />
                 </div>    
 
-                <div className="flex-1 p-4 mx-10 my-3 bg-gray-950 rounded-2xl shadow-2xl shadow-sky-50">  
+                <div className="flex-1 pl-14 md:pl-10 sm:pl-0 p-4 mx-10 my-3 bg-gray-950 rounded-2xl shadow-2xl shadow-sky-50">  
                     {renderFeature()}
                 </div>      
             </div>    

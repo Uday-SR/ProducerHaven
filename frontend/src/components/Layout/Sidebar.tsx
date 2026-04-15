@@ -21,7 +21,7 @@ export default function Sidebar({
 }: SidebarProps) {
 
     const itemClass = (name: string) =>
-        `p-4 flex items-center gap-2 cursor-pointer rounded-2xl mx-2 transition-all duration-300
+        `p-4 flex items-center gap-2 cursor-pointer rounded-2xl mx-0 sm:mx-2 transition-all duration-300
         ${feature === name
             ? "bg-gray-500 text-black"
             : "hover:bg-gray-300 hover:text-black"
@@ -30,12 +30,12 @@ export default function Sidebar({
     return (
         <div
             className={`h-115 italic font-mono ml-2 py-2 my-3 bg-fuchsia-950 border border-e-orange-300 text-yellow-500 
-            ${expanded ? "w-50" : "w-20"} justify-center rounded-2xl transition-all duration-300 ease-in-out`}
+            ${expanded ? "w-50" : "w-15 sm:w-20"} justify-center rounded-2xl transition-all duration-300 ease-in-out`}
         >
 
             {/* Toggle */}
             <div
-                className="p-4 mx-2 flex cursor-pointer"
+                className="p-4 mx-0 sm:mx-2 flex cursor-pointer"
                 onClick={toggleSidebar}
             >
                 <Expand />

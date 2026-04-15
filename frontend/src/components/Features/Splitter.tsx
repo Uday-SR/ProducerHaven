@@ -53,11 +53,11 @@ export default function Splitter() {
   return (
     <div>
 
-      <main className="justify-items-center">
+      <main className="justify-items-center min-h-screen">
 
         <img
             src={splitImg}
-            className="object-cover rounded-2xl border-1 hover:border-amber-300 transition duration-300"
+            className="object-cover size-50 w-fit rounded-2xl border-1 transition duration-300"
         />
 
         <div className="mt-10 ml-5 italic text-blue-200 font-mono lg:w-150">

@@ -117,106 +117,106 @@ export default function Tuner() {
             : 0;
 
     return (
-        <div className="items-center p-5"
-            
-        >
-            <h2>Pro Tuner</h2>
+        <div className="justify-items-center min-h-screen">
+            <main className=" p-5 justify-items-center">
+                <h3>Pro Tuner</h3>
 
-            {/* Instrument Selector */}
-            <select
-                value={instrument}
-                className="bg-blue-900 text-white border border-amber-300 rounded-lg px-3 py-2"
-                onChange={(e) =>
-                    setInstrument(
-                        e.target.value as keyof typeof instruments
-                    )
-                }
-            >
-                {Object.entries(instruments).map(([k, v]) => (
-                    <option key={k} value={k} className="bg-blue-900 border-amber-300">
-                        {v.name}
-                    </option>
-                ))}
-            </select>
+                {/* Instrument Selector */}
+                <select
+                    value={instrument}
+                    className="bg-blue-900 text-white border border-amber-300 rounded-lg  py-2 my-2"
+                    onChange={(e) =>
+                        setInstrument(
+                            e.target.value as keyof typeof instruments
+                        )
+                    }
+                >
+                    {Object.entries(instruments).map(([k, v]) => (
+                        <option key={k} value={k} className="bg-blue-900 border-amber-300">
+                            {v.name}
+                        </option>
+                    ))}
+                </select>
 
-            <h3>
-                {frequency
-                    ? `${Math.round(frequency)} Hz (${note})`
-                    : "Listening..."}
-            </h3>
+                <h3>
+                    {frequency
+                        ? `${Math.round(frequency)} Hz (${note})`
+                        : "Listening..."}
+                </h3>
 
-            {/* Needle */}
-            <div
-                style={{
-                    position: "relative",
-                    width: "260px",
-                    height: "150px",
-                    margin: "40px auto",
-                }}
-            >
+                {/* Needle */}
                 <div
                     style={{
-                        position: "absolute",
-                        bottom: 0,
-                        width: "100%",
-                        height: "130px",
-                        borderTopLeftRadius: "300px",
-                        borderTopRightRadius: "300px",
-                        border: "6px solid #334155",
-                        borderBottom: "none",
+                        position: "relative",
+                        width: "260px",
+                        height: "150px",
+                        margin: "40px auto",
                     }}
-                />
-
-                <motion.div
-                    animate={{ rotate: angle }}
-                    transition={{ type: "spring", stiffness: 120 }}
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: "50%",
-                        width: "3px",
-                        height: "120px",
-                        background:
-                            detune !== null &&
-                            Math.abs(detune) < 5
-                                ? "lime"
-                                : "red",
-                        transformOrigin: "bottom center",
-                        borderTopWidth: "70px",
-                        borderTopLeftRadius: "500px",
-                        borderTopRightRadius: "500px",
-                    }}
-                />
-            </div>
-
-            {/* Strings */}
-            <div className="flex gap-2.5 justify-center">
-                {Object.keys(instruments[instrument].notes).map((s) => (
+                >
                     <div
-                        key={s}
                         style={{
-                            padding: "10px",
-                            borderRadius: "8px",
-                            background:
-                                s === targetString
-                                    ? "limegreen"
-                                    : "#1e293b",
+                            position: "absolute",
+                            bottom: 0,
+                            width: "100%",
+                            height: "130px",
+                            borderTopLeftRadius: "300px",
+                            borderTopRightRadius: "300px",
+                            border: "6px solid #334155",
+                            borderBottom: "none",
                         }}
-                    >
-                        {s}
-                    </div>
-                ))}
-            </div>
+                    />
 
-            {/* Feedback */}
-            <p>
-                {detune !== null &&
-                    (Math.abs(detune) < 5
-                        ? "Perfectly in tune!"
-                        : detune > 0
-                        ? `Sharp (+${detune.toFixed(1)} cents)`
-                        : `Flat (${detune.toFixed(1)} cents)`)}
-            </p>
-        </div>
+                    <motion.div
+                        animate={{ rotate: angle }}
+                        transition={{ type: "spring", stiffness: 120 }}
+                        style={{
+                            position: "absolute",
+                            bottom: 0,
+                            left: "50%",
+                            width: "3px",
+                            height: "120px",
+                            background:
+                                detune !== null &&
+                                Math.abs(detune) < 5
+                                    ? "lime"
+                                    : "red",
+                            transformOrigin: "bottom center",
+                            borderTopWidth: "70px",
+                            borderTopLeftRadius: "500px",
+                            borderTopRightRadius: "500px",
+                        }}
+                    />
+                </div>
+
+                {/* Strings */}
+                <div className="flex gap-2.5 justify-center">
+                    {Object.keys(instruments[instrument].notes).map((s) => (
+                        <div
+                            key={s}
+                            style={{
+                                padding: "10px",
+                                borderRadius: "8px",
+                                background:
+                                    s === targetString
+                                        ? "limegreen"
+                                        : "#1e293b",
+                            }}
+                        >
+                            {s}
+                        </div>
+                    ))}
+                </div>
+
+                {/* Feedback */}
+                <p>
+                    {detune !== null &&
+                        (Math.abs(detune) < 5
+                            ? "Perfectly in tune!"
+                            : detune > 0
+                            ? `Sharp (+${detune.toFixed(1)} cents)`
+                            : `Flat (${detune.toFixed(1)} cents)`)}
+                </p>
+            </main>
+        </div>    
     );
 }
