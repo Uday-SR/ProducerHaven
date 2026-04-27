@@ -117,7 +117,7 @@ export default function Tuner() {
             : 0;
 
     return (
-        <div className="justify-items-center min-h-screen">
+        <div className="justify-items-center min-h-screen w-fit">
             <main className=" p-5 justify-items-center">
                 <h3>Pro Tuner</h3>
 
