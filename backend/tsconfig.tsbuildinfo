@@ -1,1 +1,1 @@
-{"root":["./src/index.ts"],"version":"5.9.2"}
+{"root":["./src/config.ts","./src/index.ts","./src/app/index.ts","./src/db/db.ts","./src/db/model/usage.model.ts","./src/db/model/user.model.ts","./src/middlewares/user.middleware.ts","./src/routes/user.ts","./src/services/equalizer.ts"],"version":"5.9.2"}
