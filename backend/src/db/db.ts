@@ -6,7 +6,7 @@ import Usage from './model/usage.model'
 const MONGO_KEY = process.env.MONGO_KEY!
 
 async function connect() {
-    await mongoose.connect("mongodb+srv://Kutt:Nalla321@cluster0.ravbc.mongodb.net/ProdHaven");
+    await mongoose.connect(`${MONGO_KEY}`);
     console.log("Connected to db")
 }
 
