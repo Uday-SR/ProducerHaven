@@ -1,0 +1,42 @@
+.sampler{width:100%;max-width:1200px;margin:0 auto;padding:8px;color:#e5e7eb;font-family:inherit}
+.sampler *{box-sizing:border-box}
+.sampler-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.sampler-eyebrow{font-size:11px;letter-spacing:.18em;color:#38bdf8;font-weight:700;margin:0 0 6px}
+.sampler h1{font-size:clamp(26px,3vw,36px);font-weight:800;margin:0}
+.sampler-subtitle,.sampler-panel-title p{color:#94a3b8;font-size:13px;margin:5px 0 0}
+.sampler-panel{background:#111827;border:1px solid #263244;border-radius:16px;padding:18px;margin:14px 0;min-width:0}
+.sampler-panel-title{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.sampler h2{font-size:17px;font-weight:700;margin:0}
+.sampler-panel-title p{font-size:12px}
+.sampler-button{border:1px solid #0284c7;background:#0369a1;color:white;border-radius:9px;padding:9px 13px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.sampler-button:hover{background:#0284c7}
+.sampler-button:disabled{opacity:.45;cursor:not-allowed}
+.sampler-button.secondary{background:#1f2937;border-color:#374151;color:#e5e7eb}
+.sampler-button.secondary:hover{background:#374151}
+.sampler-waveform{display:block;width:100%;height:170px;border-radius:10px;border:1px solid #334155;cursor:crosshair}
+.sampler-hint,.sampler-footer{font-size:11px;color:#94a3b8;margin:8px 0 0}
+.sampler-fields{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin-top:14px}
+.sampler-fields label{display:flex;flex-direction:column;gap:6px;font-size:11px;color:#9ca3af;min-width:110px;flex:1}
+.sampler input:not([type=range]):not([type=checkbox]){background:#0b1220;border:1px solid #374151;border-radius:8px;padding:9px;color:#e5e7eb;min-width:0;width:100%;font-size:12px}
+.sampler input[type=range]{width:100%;accent-color:#38bdf8}
+.sampler input[type=checkbox]{accent-color:#38bdf8}
+.sampler-inline-actions{display:flex;gap:8px;flex-wrap:wrap}
+.sampler-slice-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:14px}
+.sampler-slice{display:flex;flex-direction:column;gap:5px;text-align:left;padding:10px;background:#0b1220;border:1px solid #334155;border-radius:9px;color:#e5e7eb;cursor:pointer}
+.sampler-slice span{font-size:11px;color:#94a3b8}
+.sampler-slice.selected{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.sampler-empty{font-size:12px;color:#94a3b8;grid-column:1/-1}
+.sampler-pad-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.sampler-pad{position:relative;min-height:105px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:7px;padding:12px;background:#0b1220;border:1px solid #334155;border-radius:12px;color:#e5e7eb;text-align:left;cursor:pointer;transition:transform .08s,border-color .08s,background .08s;overflow:hidden}
+.sampler-pad:active{transform:scale(.98)}
+.sampler-pad.active{border-color:#38bdf8;box-shadow:0 0 0 1px #38bdf8}
+.sampler-pad.assigned{background:linear-gradient(145deg,#102d3b,#0b1220 75%)}
+.sampler-pad-key{font-size:10px;font-weight:800;color:#38bdf8;border:1px solid #155e75;border-radius:5px;padding:3px 6px}
+.sampler-pad strong{font-size:12px;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.sampler-pad>span:last-of-type{font-size:10px;color:#94a3b8}
+.sampler-pad em{position:absolute;right:8px;top:8px;color:#f87171;font-size:9px;font-style:normal}
+.sampler-pad-settings{align-items:end}
+.sampler-checkbox{flex-direction:row!important;align-items:center;flex:0!important;white-space:nowrap}
+.sampler-status{border:1px solid #164e63;background:#082f49;color:#bae6fd;border-radius:10px;padding:11px 13px;font-size:12px;margin-top:14px}
+.sampler-footer{padding:4px 2px 16px}
+@media(max-width:640px){.sampler{padding:0}.sampler-panel{padding:12px}.sampler-pad-grid{gap:6px}.sampler-pad{min-height:90px;padding:8px}.sampler-pad strong{font-size:10px}.sampler-pad>span:last-of-type{font-size:9px}.sampler-waveform{height:135px}}

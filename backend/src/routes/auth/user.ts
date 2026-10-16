@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { Request, Response } from "express";
 
-import { User } from "../db/db";
+import { User } from "../../db/db";
 
-import userMiddleware from "../middlewares/user.middleware";
+import userMiddleware from "../../middlewares/user.middleware";
 
 import Jwt, {type JwtPayload} from "jsonwebtoken";
 

@@ -73,8 +73,8 @@ export default function Sidebar({
 
             {/* Karaoke */}
             <div
-                className={itemClass("karaoke")}
-                onClick={() => setFeature("karaoke")}
+                className={itemClass("sampler")}
+                onClick={() => setFeature("sampler")}
             >
                 <Karaoke />
                 {expanded && <span>Karaoke</span>}
